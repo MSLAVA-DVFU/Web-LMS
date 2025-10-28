@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<head>
+    <title>Каталог — Великие фильмы XXI века</title>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#003366" vlink="#660033" alink="#cc0000">
+
+    <header align="center">
+        <h1>Великие фильмы XXI века</h1>
+        <p><b>Каталог фильмов XXI века: таблица, фильтры и формы настройки</b></p>
+        <nav>
+            <a href="index.html">Главная</a> |
+            <a href="movie.html">Фильм дня</a> |
+            <a href="data.html">Каталог фильмов</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Фильмы XXI века — таблица данных</h2>
+            <p>
+                На этой странице представлена таблица с фильмами XXI века (на основе рейтинга КиноПоиска).  
+                Используйте формы ниже для сортировки, фильтрации и настройки параметров графика.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Настройки отображения фильмов</h3>
+
+            <details>
+                <summary><b>Фильтрация фильмов</b></summary>
+                <form>
+                    <fieldset>
+                        <legend><b>Фильтры</b></legend>
+
+			<label for="countrySelect">Страна:</label>
+                        <select id="countrySelect" name="country">
+                            <option value="all">Все</option>
+                	    <option value="usa">США</option>
+                	    <option value="uk">Великобритания</option>
+                	    <option value="canada">Канада</option>
+                	    <option value="france">Франция</option>
+                	    <option value="japan">Япония</option>
+                	    <option value="germany">Германия</option>
+                	    <option value="italy">Италия</option>
+                	    <option value="brazil">Бразилия</option>
+                	    <option value="newzealand">Новая Зеландия</option>
+                	    <option value="southkorea">Южная Корея</option>
+                	    <option value="hungary">Венгрия</option>
+                	    <option value="india">Индия</option>
+                	    <option value="poland">Польша</option>
+                	    <option value="australia">Австралия</option>
+                	    <option value="sweden">Швеция</option>
+                	    <option value="mexico">Мексика</option>
+                	    <option value="germany">Германия</option>
+                        </select>
+                        <br><br>
+
+                        <label for="genreSelect">Жанр:</label>
+                        <select id="genreSelect" name="genre">
+                            <option value="all">Все</option>
+                            <option value="scifi">Фантастика</option>
+			    <option value="fantasy">Фэнтези</option>
+                            <option value="drama">Драма</option>
+			    <option value="bio">Биография</option>
+                            <option value="thriller">Триллер</option>
+			    <option value="detective">Детектив</option>
+                            <option value="animation">Анимация</option>
+                            <option value="historical">Исторические</option>
+			    <option value="adventure">Приключения</option>
+			    <option value="action">Боевик</option>
+			    <option value="comedy">Комедия</option>
+               		    <option value="musical">Мюзикл</option>
+			    <option value="crime">Криминал</option>
+               		    <option value="romance">Мелодрама</option>
+                        </select>
+                        <br><br>
+
+                        <label for="yearFrom">Год выпуска от:</label>
+                        <input type="number" id="yearFrom" name="yearFrom" min="2000" max="2025" value="2000">
+                        <label for="yearTo">до:</label>
+                        <input type="number" id="yearTo" name="yearTo" min="2000" max="2025" value="2025">
+                        <br><br>
+
+                        <label for="minRating">Минимальный рейтинг IMDb:</label>
+                        <input type="number" id="minRating" name="minRating" min="0" max="10" step="0.1" value="7.0">
+                        <br><br>
+
+                        <button type="submit">Применить фильтр</button>
+                    </fieldset>
+                </form>
+            </details>
+
+            <br>
+
+            <details>
+                <summary><b>Сортировка фильмов</b></summary>
+                <form>
+                    <fieldset>
+                        <legend><b>Сортировка</b></legend>
+
+                        <label for="sortField">Сортировать по:</label>
+                        <select id="sortField" name="sortField">
+                            <option value="title">Названию</option>
+                            <option value="year">Году выпуска</option>
+			    <option value="country">Стране</option>
+			    <option value="genre">Жанру</option>
+                            <option value="rating">Рейтингу IMDb</option>
+                            <option value="director">Режиссёру</option>
+			    <option value="budjet">Бюджету</option>
+			    <option value="money">Кассовым сборам</option>
+                        </select>
+                        <br><br>
+
+                        <label><input type="radio" name="sortOrder" value="inc" checked> По возрастанию</label>
+                        <label><input type="radio" name="sortOrder" value="dec"> По убыванию</label>
+                        <br><br>
+
+                        <button type="submit">Применить сортировку</button>
+                    </fieldset>
+                </form>
+            </details>
+
+            <br>
+
+            <details>
+                <summary><b>Настройка параметров графика</b></summary>
+                <form>
+                    <fieldset>
+                        <legend><b>Параметры графика</b></legend>
+
+                        <label for="chartType">Тип графика:</label>
+                        <select id="chartType" name="chartType">
+                            <option value="bar">Гистограмма</option>
+                            <option value="line">Линейный график</option>
+                        </select>
+                        <br><br>
+
+			<label> <b>Ось ОХ:</b><br>
+			  <input type="radio" name="x-type" value="year"> Год<br>
+			  <input type="radio" name="x-type" value="country"> Страна<br>
+			  <input type="radio" name="x-type" value="genre"> Жанр<br>
+			</label>
+                        <br>
+
+			<label> <b>Ось ОY:</b><br>
+			  <input type="checkbox" name="y-type" value="rating"> Рейтинг<br>
+			  <input type="checkbox" name="y-type" value="budjet"> Бюджет<br>
+			  <input type="checkbox" name="y-type" value="money"> Сборы в мире<br>
+			</label>
+                        <br>
+
+                        <label><input type="checkbox" name="highlightTop"> Выделить фильмы с рейтингом выше 8.0</label>
+                        <br>
+
+                        <button type="submit">Построить график</button>
+                    </fieldset>
+                </form>
+            </details>
+        </section>
+
+        <hr>
+
+            <table border="1" cellspacing="0" cellpadding="5" align="center">
+                <tr bgcolor="#f0f0f0">
+                    <th>№</th>
+                    <th>Название</th>
+                    <th>Год</th>
+		    <th>Страна</th>
+                    <th>Жанр</th>
+                    <th>Режиссёр</th>
+                    <th>Рейтинг IMDb</th>
+		    <th>Бюджет, млн $</th>
+		    <th>Кассовые сборы, млн $</th>
+                </tr>
+                <tr><td>1</td><td>Начало (Inception)</td><td>2010</td><td>США, Великобритания</td><td>Фантастика</td><td>Кристофер Нолан</td><td>8.8</td><td>160</td><td>828.3</td></tr>
+    		<tr><td>2</td><td>Паразиты (Parasite)</td><td>2019</td><td>Южная Корея</td><td>Драма</td><td>Бонг Джун Хо</td><td>8.6</td><td>11.4</td><td>258.7</td></tr>
+    		<tr><td>3</td><td>Аватар (Avatar)</td><td>2009</td><td>США</td><td>Фантастика</td><td>Джеймс Кэмерон</td><td>7.9</td><td>237</td><td>2923.7</td></tr>
+    		<tr><td>4</td><td>Дюна (Dune)</td><td>2021</td><td>США, Канада, Венгрия</td><td>Фантастика</td><td>Дени Вильнёв</td><td>8.1</td><td>165</td><td>402</td></tr>
+    		<tr><td>5</td><td>Оппенгеймер (Oppenheimer)</td><td>2023</td><td>США, Великобритания</td><td>Драма</td><td>Кристофер Нолан</td><td>8.6</td><td>100</td><td>958.2</td></tr>
+    		<tr><td>6</td><td>Тёмный рыцарь (The Dark Knight)</td><td>2008</td><td>США, Великобритания</td><td>Боевик</td><td>Кристофер Нолан</td><td>9.0</td><td>185</td><td>1006</td></tr>
+    		<tr><td>7</td><td>Город Бога (City of God)</td><td>2002</td><td>Бразилия</td><td>Драма</td><td>Фернанду Мейреллиш</td><td>8.6</td><td>3.3</td><td>30.6</td></tr>
+    		<tr><td>8</td><td>Властелин колец: Возвращение короля (The Lord of the Rings: The Return of the King)</td><td>2003</td><td>Новая Зеландия, США</td><td>Фэнтези</td><td>Питер Джексон</td><td>9.0</td><td>94</td><td>1146</td></tr>
+    		<tr><td>9</td><td>Властелин колец: Две крепости (The Lord of the Rings: The Two Towers)</td><td>2002</td><td>Новая Зеландия, США</td><td>Фэнтези</td><td>Питер Джексон</td><td>8.8</td><td>94</td><td>947.5</td></tr>
+    		<tr><td>10</td><td>Властелин колец: Братство кольца (The Fellowship of the Ring)</td><td>2001</td><td>Новая Зеландия, США</td><td>Фэнтези</td><td>Питер Джексон</td><td>8.9</td><td>93</td><td>888.3</td></tr>
+    		<tr><td>11</td><td>Интерстеллар (Interstellar)</td><td>2014</td><td>США, Великобритания</td><td>Фантастика</td><td>Кристофер Нолан</td><td>8.7</td><td>165</td><td>701.8</td></tr>
+    		<tr><td>12</td><td>Унесённые призраками (Spirited Away)</td><td>2001</td><td>Япония</td><td>Анимация</td><td>Хаяо Миядзаки</td><td>8.6</td><td>19</td><td>365</td></tr>
+    		<tr><td>13</td><td>Пианист (The Pianist)</td><td>2002</td><td>Польша, Франция, Германия</td><td>Драма</td><td>Роман Полански</td><td>8.5</td><td>35</td><td>120.1</td></tr>
+    		<tr><td>14</td><td>Отступники (The Departed)</td><td>2006</td><td>США</td><td>Криминал</td><td>Мартин Скорсезе</td><td>8.5</td><td>90</td><td>291.5</td></tr>
+    		<tr><td>15</td><td>Престиж (The Prestige)</td><td>2006</td><td>США, Великобритания</td><td>Триллер</td><td>Кристофер Нолан</td><td>8.5</td><td>40</td><td>109.7</td></tr>
+    		<tr><td>16</td><td>Джокер (Joker)</td><td>2019</td><td>США, Канада</td><td>Драма</td><td>Тодд Филлипс</td><td>8.4</td><td>55</td><td>1074.4</td></tr>
+    		<tr><td>17</td><td>Зелёная книга (Green Book)</td><td>2018</td><td>США</td><td>Драма</td><td>Питер Фаррелли</td><td>8.2</td><td>23</td><td>321.8</td></tr>
+    		<tr><td>18</td><td>Форма воды (The Shape of Water)</td><td>2017</td><td>США, Канада</td><td>Фэнтези</td><td>Гильермо дель Торо</td><td>7.3</td><td>19.4</td><td>195.2</td></tr>
+    		<tr><td>19</td><td>Ла-Ла Ленд (La La Land)</td><td>2016</td><td>США</td><td>Мюзикл</td><td>Дэмьен Шазелл</td><td>8.0</td><td>30</td><td>448.9</td></tr>
+    		<tr><td>20</td><td>Бёрдмэн (Birdman)</td><td>2014</td><td>США</td><td>Драма</td><td>Алехандро Г. Иньярриту</td><td>7.7</td><td>18</td><td>103.2</td></tr>
+    		<tr><td>21</td><td>12 лет рабства (12 Years a Slave)</td><td>2013</td><td>Великобритания, США</td><td>Драма</td><td>Стив Маккуин</td><td>8.1</td><td>20</td><td>187.7</td></tr>
+    		<tr><td>22</td><td>Операция «Арго» (Argo)</td><td>2012</td><td>США</td><td>Триллер</td><td>Бен Аффлек</td><td>7.7</td><td>44.5</td><td>232.3</td></tr>
+    		<tr><td>23</td><td>Хранитель времени (Hugo)</td><td>2011</td><td>США, Франция</td><td>Приключения</td><td>Мартин Скорсезе</td><td>7.5</td><td>150</td><td>185.8</td></tr>
+    		<tr><td>24</td><td>Король говорит! (The King’s Speech)</td><td>2010</td><td>Великобритания</td><td>Драма</td><td>Том Хупер</td><td>8.0</td><td>15</td><td>427.4</td></tr>
+    		<tr><td>25</td><td>Повелитель бури (The Hurt Locker)</td><td>2008</td><td>США</td><td>Драма</td><td>Кэтрин Бигелоу</td><td>7.5</td><td>15</td><td>49.2</td></tr>
+    		<tr><td>26</td><td>Миллионер из трущоб (Slumdog Millionaire)</td><td>2008</td><td>Великобритания, Индия</td><td>Драма</td><td>Дэнни Бойл</td><td>8.0</td><td>15</td><td>378.4</td></tr>
+    		<tr><td>27</td><td>Старикам тут не место (No Country for Old Men)</td><td>2007</td><td>США</td><td>Триллер</td><td>Коэны</td><td>8.2</td><td>25</td><td>171.6</td></tr>
+    		<tr><td>28</td><td>Столкновение (Crash)</td><td>2004</td><td>США</td><td>Драма</td><td>Пол Хаггис</td><td>7.7</td><td>6.5</td><td>98.4</td></tr>
+    		<tr><td>29</td><td>Игры разума (A Beautiful Mind)</td><td>2001</td><td>США</td><td>Драма</td><td>Рон Ховард</td><td>8.2</td><td>58</td><td>313.5</td></tr>
+    		<tr><td>30</td><td>Гладиатор (Gladiator)</td><td>2000</td><td>США, Великобритания</td><td>Исторический</td><td>Ридли Скотт</td><td>8.5</td><td>103</td><td>460.6</td></tr>
+    		<tr><td>31</td><td>Одержимость (Whiplash)</td><td>2014</td><td>США</td><td>Драма</td><td>Дэмьен Шазелл</td><td>8.5</td><td>3.3</td><td>49</td></tr>
+    		<tr><td>32</td><td>Безумный Макс: Дорога ярости (Mad Max: Fury Road)</td><td>2015</td><td>Австралия, США</td><td>Боевик</td><td>Джордж Миллер</td><td>8.1</td><td>150</td><td>378.9</td></tr>
+    		<tr><td>33</td><td>Три билборда на границе Эббинга, Миссури (Three Billboards Outside Ebbing, Missouri)</td><td>2017</td><td>США, Великобритания</td><td>Драма</td><td>Мартин Макдонах</td><td>8.1</td><td>12</td><td>159.2</td></tr>
+    		<tr><td>34</td><td>Чёрная пантера (Black Panther)</td><td>2018</td><td>США</td><td>Фантастика</td><td>Райан Куглер</td><td>7.3</td><td>200</td><td>1347</td></tr>
+    		<tr><td>35</td><td>Гравитация (Gravity)</td><td>2013</td><td>США, Великобритания</td><td>Фантастика</td><td>Альфонсо Куарон</td><td>7.7</td><td>100</td><td>723.2</td></tr>
+    		<tr><td>36</td><td>Король Артур: Легенда о мече (King Arthur: Legend of the Sword)</td><td>2017</td><td>Великобритания, США</td><td>Фэнтези</td><td>Гай Ричи</td><td>6.7</td><td>175</td><td>148.7</td></tr>
+    		<tr><td>37</td><td>Девушка с татуировкой дракона (The Girl with the Dragon Tattoo)</td><td>2011</td><td>США, Швеция</td><td>Детектив</td><td>Дэвид Финчер</td><td>7.8</td><td>90</td><td>232.6</td></tr>
+    		<tr><td>38</td><td>Выживший (The Revenant)</td><td>2015</td><td>США</td><td>Приключения</td><td>Алехандро Г. Иньярриту</td><td>8.0</td><td>135</td><td>533</td></tr>
+    		<tr><td>39</td><td>Джон Уик (John Wick)</td><td>2014</td><td>США</td><td>Боевик</td><td>Чад Стахелски</td><td>7.4</td><td>20</td><td>86</td></tr>
+    		<tr><td>40</td><td>Кунг-фу Панда (Kung Fu Panda)</td><td>2008</td><td>США</td><td>Анимация</td><td>Марк Осборн</td><td>7.6</td><td>130</td><td>632</td></tr>
+		<tr><td>41</td><td>Социальная сеть (The Social Network)</td><td>2010</td><td>США</td><td>Драма</td><td>Дэвид Финчер</td><td>7.8</td><td>40</td><td>224.9</td></tr>
+		<tr><td>42</td><td>Железный человек (Iron Man)</td><td>2008</td><td>США</td><td>Фантастика</td><td>Джон Фавро</td><td>7.9</td><td>140</td><td>585.8</td></tr>
+		<tr><td>43</td><td>Топ Ган: Мэверик (Top Gun: Maverick)</td><td>2022</td><td>США</td><td>Боевик</td><td>Джозеф Косински</td><td>8.2</td><td>170</td><td>1495</td></tr>
+		<tr><td>44</td><td>Барби (Barbie)</td><td>2023</td><td>США, Великобритания</td><td>Комедия</td><td>Грета Гервиг</td><td>7.0</td><td>145</td><td>1437</td></tr>
+		<tr><td>45</td><td>Джентльмены (The Gentlemen)</td><td>2019</td><td>Великобритания, США</td><td>Криминал</td><td>Гай Ричи</td><td>7.8</td><td>22</td><td>115</td></tr>
+		<tr><td>46</td><td>Дюна: Часть вторая (Dune: Part Two)</td><td>2024</td><td>США, Канада, Венгрия</td><td>Фантастика</td><td>Дени Вильнёв</td><td>8.8</td><td>190</td><td>711.8</td></tr>
+		<tr><td>47</td><td>Богемская рапсодия (Bohemian Rhapsody)</td><td>2018</td><td>Великобритания, США</td><td>Биография</td><td>Брайан Сингер</td><td>7.9</td><td>52</td><td>910.8</td></tr>
+		<tr><td>48</td><td>К звёздам (Ad Astra)</td><td>2019</td><td>США</td><td>Фантастика</td><td>Джеймс Грэй</td><td>6.5</td><td>90</td><td>127.5</td></tr>
+		<tr><td>49</td><td>Всё везде и сразу (Everything Everywhere All at Once)</td><td>2022</td><td>США</td><td>Фантастика</td><td>Дэниэл Кван, Дэниэл Шайнерт</td><td>7.8</td><td>25</td><td>143.4</td></tr>
+		<tr><td>50</td><td>Бэтмен (The Batman)</td><td>2022</td><td>США</td><td>Боевик</td><td>Мэтт Ривз</td><td>7.8</td><td>185</td><td>772</td></tr>
+		<tr><td>51</td><td>Душа (Soul)</td><td>2020</td><td>США</td><td>Анимация</td><td>Пит Доктер</td><td>8.0</td><td>150</td><td>121.7</td></tr>
+		<tr><td>52</td><td>Остров проклятых (Shutter Island)</td><td>2010</td><td>США</td><td>Триллер</td><td>Мартин Скорсезе</td><td>8.2</td><td>80</td><td>294.8</td></tr>
+		<tr><td>53</td><td>Волк с Уолл-стрит (The Wolf of Wall Street)</td><td>2013</td><td>США</td><td>Биография</td><td>Мартин Скорсезе</td><td>8.2</td><td>100</td><td>406.9</td></tr>
+		<tr><td>54</td><td>Бегущий по лезвию 2049 (Blade Runner 2049)</td><td>2017</td><td>США, Канада, Венгрия</td><td>Фантастика</td><td>Дени Вильнёв</td><td>8.0</td><td>150</td><td>259.3</td></tr>
+		<tr><td>55</td><td>Джунгли зовут! В поисках Марсупилами (Sur la piste du Marsupilami)</td><td>2012</td><td>Франция</td><td>Комедия</td><td>Ален Шаба</td><td>6.0</td><td>40</td><td>62.2</td></tr>
+		<tr><td>56</td><td>Рапунцель: Запутанная история (Tangled)</td><td>2010</td><td>США</td><td>Анимация</td><td>Натан Грено</td><td>7.7</td><td>260</td><td>592.4</td></tr>
+		<tr><td>57</td><td>Холодное сердце (Frozen)</td><td>2013</td><td>США</td><td>Анимация</td><td>Крис Бак, Дженнифер Ли</td><td>7.5</td><td>150</td><td>1300</td></tr>
+		<tr><td>58</td><td>Доктор Стрэндж: В мультивселенной безумия (Doctor Strange in the Multiverse of Madness)</td><td>2022</td><td>США</td><td>Фантастика</td><td>Сэм Рэйми</td><td>6.9</td><td>200</td><td>955.8</td></tr>
+		<tr><td>59</td><td>Время (In Time)</td><td>2011</td><td>США</td><td>Фантастика</td><td>Эндрю Никкол</td><td>6.7</td><td>40</td><td>174</td></tr>
+		<tr><td>60</td><td>Джон Уик 4 (John Wick: Chapter 4)</td><td>2023</td><td>США, Германия</td><td>Боевик</td><td>Чад Стахелски</td><td>7.8</td><td>100</td><td>440</td></tr>
+
+            </table>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer align="center">
+        <p><small>Разработал: Мистреков Вячеслав, группа Б9123-02.03.03тп</small></p>
+        <p><small>© 2025. Проект «Великие фильмы XXI века»</small></p>
+    </footer>
+
+</body>
+</html>
