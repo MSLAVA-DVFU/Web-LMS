@@ -35,60 +35,23 @@
                 <form>
                     <fieldset>
                         <legend><b>Фильтры</b></legend>
-
-			<label for="countrySelect">Страна:</label>
-                        <select id="countrySelect" name="country">
-                            <option value="all">Все</option>
-                	    <option value="usa">США</option>
-                	    <option value="uk">Великобритания</option>
-                	    <option value="canada">Канада</option>
-                	    <option value="france">Франция</option>
-                	    <option value="japan">Япония</option>
-                	    <option value="germany">Германия</option>
-                	    <option value="italy">Италия</option>
-                	    <option value="brazil">Бразилия</option>
-                	    <option value="newzealand">Новая Зеландия</option>
-                	    <option value="southkorea">Южная Корея</option>
-                	    <option value="hungary">Венгрия</option>
-                	    <option value="india">Индия</option>
-                	    <option value="poland">Польша</option>
-                	    <option value="australia">Австралия</option>
-                	    <option value="sweden">Швеция</option>
-                	    <option value="mexico">Мексика</option>
-                	    <option value="germany">Германия</option>
-                        </select>
-                        <br><br>
-
+                        
+                        <label for="countrySelect">Страна:</label>
+                        <input type="text"><br><br>
+                        
                         <label for="genreSelect">Жанр:</label>
-                        <select id="genreSelect" name="genre">
-                            <option value="all">Все</option>
-                            <option value="scifi">Фантастика</option>
-			    <option value="fantasy">Фэнтези</option>
-                            <option value="drama">Драма</option>
-			    <option value="bio">Биография</option>
-                            <option value="thriller">Триллер</option>
-			    <option value="detective">Детектив</option>
-                            <option value="animation">Анимация</option>
-                            <option value="historical">Исторические</option>
-			    <option value="adventure">Приключения</option>
-			    <option value="action">Боевик</option>
-			    <option value="comedy">Комедия</option>
-               		    <option value="musical">Мюзикл</option>
-			    <option value="crime">Криминал</option>
-               		    <option value="romance">Мелодрама</option>
-                        </select>
-                        <br><br>
-
+                        <input type="text"><br><br>
+			
                         <label for="yearFrom">Год выпуска от:</label>
-                        <input type="number" id="yearFrom" name="yearFrom" min="2000" max="2025" value="2000">
+                        <input type="text" id="yearFrom" name="yearFrom">
                         <label for="yearTo">до:</label>
-                        <input type="number" id="yearTo" name="yearTo" min="2000" max="2025" value="2025">
+                        <input type="text" id="yearTo" name="yearTo">
                         <br><br>
 
                         <label for="minRating">Минимальный рейтинг IMDb:</label>
-                        <input type="number" id="minRating" name="minRating" min="0" max="10" step="0.1" value="7.0">
+                        <input type="text" id="minRating" name="minRating">
                         <br><br>
-
+                        
                         <button type="submit">Применить фильтр</button>
                     </fieldset>
                 </form>
@@ -102,21 +65,52 @@
                     <fieldset>
                         <legend><b>Сортировка</b></legend>
 
-                        <label for="sortField">Сортировать по:</label>
+                        <label for="sortField">Первый уровень:</label>
                         <select id="sortField" name="sortField">
-                            <option value="title">Названию</option>
-                            <option value="year">Году выпуска</option>
-			    <option value="country">Стране</option>
-			    <option value="genre">Жанру</option>
-                            <option value="rating">Рейтингу IMDb</option>
-                            <option value="director">Режиссёру</option>
-			    <option value="budjet">Бюджету</option>
-			    <option value="money">Кассовым сборам</option>
+                            <option value="none" checked>Нет</option>
+                            <option value="title">Название</option>
+                            <option value="year">Год выпуска</option>
+			                <option value="country">Страна</option>
+			                <option value="genre">Жанр</option>
+			                <option value="director">Режиссёр</option>
+                            <option value="rating">Рейтинг IMDb</option>
+			                <option value="budjet">Бюджет</option>
+			                <option value="money">Кассовые сборы</option>
                         </select>
-                        <br><br>
 
-                        <label><input type="radio" name="sortOrder" value="inc" checked> По возрастанию</label>
-                        <label><input type="radio" name="sortOrder" value="dec"> По убыванию</label>
+                        <label>По убыванию <input type="checkbox" name="sortOrder" value="dec"></label>
+                        <br><br>
+                        
+                        <label for="sortField">Второй уровень:</label>
+                        <select id="sortField" name="sortField">
+                            <option value="none" checked>Нет</option>
+                            <option value="title">Название</option>
+                            <option value="year">Год выпуска</option>
+			                <option value="country">Страна</option>
+			                <option value="genre">Жанр</option>
+			                <option value="director">Режиссёр</option>
+                            <option value="rating">Рейтинг IMDb</option>
+			                <option value="budjet">Бюджет</option>
+			                <option value="money">Кассовые сборы</option>
+                        </select>
+
+                        <label>По убыванию <input type="checkbox" name="sortOrder" value="dec"></label>
+                        <br><br>
+                        
+                        <label for="sortField">Третий уровень:</label>
+                        <select id="sortField" name="sortField">
+                            <option value="none" checked>Нет</option>
+                            <option value="title">Название</option>
+                            <option value="year">Год выпуска</option>
+			                <option value="country">Страна</option>
+			                <option value="genre">Жанр</option>
+			                <option value="director">Режиссёр</option>
+                            <option value="rating">Рейтинг IMDb</option>
+			                <option value="budjet">Бюджет</option>
+			                <option value="money">Кассовые сборы</option>
+                        </select>
+
+                        <label>По убыванию <input type="checkbox" name="sortOrder" value="dec"></label>
                         <br><br>
 
                         <button type="submit">Применить сортировку</button>
