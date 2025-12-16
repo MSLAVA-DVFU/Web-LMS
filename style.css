@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.menu {
+    width: 100%;
+    padding: 1% 2%;
+    text-align: left;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+}
+
+a {
+    padding: 0.4em 0.4em;
+    background: #4aa3ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.7em;
+}
+
+a:hover {
+    background: #1f7fde;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 0.6em 1em;
+    margin: 0.2em 0.3em;
+    font-size: 1em;
+}
+
+
+
+.top-gallery {
+    width: 100%;
+    padding: 1% 1%;
+    overflow: hidden;
+}
+
+.block {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.5%;
+}
+
+.block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.left-tall {
+    width: 25%;
+}
+
+.middle {
+    width: 45%;
+}
+
+.middle-top img {
+    display: inline-block;
+    width: 48%;
+    margin: 0.5%;
+}
+
+.right-tall {
+    width: 25%;
+}
+
+
+
+.main-part {
+    width: 100%;
+    overflow: hidden;
+    padding: 1% 2%;
+}
+
+.main-left {
+    width: 67%;
+    display: inline-block;
+}
+
+.mid-block {
+    width: 96%;
+    border: 2px solid black;
+    margin: 2% auto;
+    padding: 2%;
+}
+
+.mid-title {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-bottom: 0.8em;
+}
+
+.mid-left, .mid-center, .mid-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 24%;
+}
+
+.mid-right {
+   width: 49%;
+}
+
+.mid-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+.cards-wrapper {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-left,.card-right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 47%;
+    margin: 1%;
+}
+
+.card-right img {
+    border-radius: 70px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.r {
+    text-align: right;
+}
+
+
+
+.bottom-block {
+    width: 100%;
+    padding: 1% 2%;
+    overflow: hidden;
+}
+
+.bottom-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.bottom-left, .bottom-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bottom-left {
+    width: 34%;
+}
+
+.bottom-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bottom-right {
+    width: 65%;
+    padding-left: 2%;
+}
+
+
+
+footer {
+    margin-top: 2em;
+    padding: 1em 0;
+    text-align: center;
+    background: #efefef;
+    font-size: 0.9em;
+    clear: both;
+}
