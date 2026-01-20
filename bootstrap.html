@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="bootstrap.css" >
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <style>
+    .active {
+      background-color: #198754;
+      border-radius: 0.375rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Фильмы 21 века</a>
+    <button 
+     class="navbar-toggler mb-2"
+     type="button"
+     data-bs-toggle="collapse" 
+     data-bs-target="#menu" 
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Фильм дня</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Каталог</a>
+        </li>
+      </ul>
+      <form  class="d-flex">
+        <input class="form-control" type="text" placeholder="Найти">
+        <button class="btn btn-outline-success" type="submit">Найти</button>
+      </form>
+    </div>
+  </nav>
+
+  <div id="gallery" class="carousel slide w-75 mx-auto carousel-dark mt-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="img-fluid d-block mx-auto" src="https://cs9.pikabu.ru/post_img/2019/08/28/8/og_og_1566995186271469898.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="img-fluid d-block mx-auto" src="https://cs12.pikabu.ru/post_img/2022/12/26/1/og_og_1672008217224957226.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="img-fluid d-block mx-auto" src="https://cs14.pikabu.ru/post_img/2023/07/25/8/og_og_169029263021733597.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img class="img-fluid d-block mx-auto" src="https://cs12.pikabu.ru/post_img/2022/06/11/2/og_og_1654910658264150996.jpg" alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <img class="img-fluid d-block mx-auto" src="https://cs13.pikabu.ru/post_img/2024/03/04/5/og_og_1709537906238813509.jpg" alt="Fifth slide">
+        </div>
+    </div>
+    <button 
+     class="carousel-control-prev" 
+     type="button" 
+     data-bs-target="#gallery" 
+     data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+    </button>
+    <button 
+     class="carousel-control-next" 
+     type="button" 
+     data-bs-target="#gallery" 
+     data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+    </button>
+  </div>
+
+  <div class="row justify-content-evenly mt-4">
+    <div class="col-md-2">
+        <div class="container d-grid justify-content-center">
+            <img class="border rounded-circle h-auto w-100" src="https://avatars.mds.yandex.net/i?id=4881de3c168bac52cc18f46fa9714c0a_l-5337299-images-thumbs&n=13" alt="Рис. 1">
+            <h4>Режиссёрская работа</h4>
+            <p>Каждый из этих фильмов — пример виртуозной режиссуры...</p>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="container d-grid justify-content-center">
+            <img class="border rounded-circle h-auto w-100" src="https://avatars.mds.yandex.net/i?id=f1043108e2fc821855ec60c4a61a47f9af524449-5290060-images-thumbs&n=13" alt="Рис. 2">
+            <h4>Актёрская игра</h4>
+            <p>В этих картинах блистают как признанные звёзды, так и новые таланты...</p>
+        </div>
+
+    </div>
+    <div class="col-md-2">
+        <div class="container d-grid justify-content-center">
+            <img class="border rounded-circle h-auto w-100" src="https://64.media.tumblr.com/avatar_96722fd74ffb_512.pnj" alt="Рис. 3">
+            <h4>Сценарий и сюжет</h4>
+            <p>Неожиданные повороты, многослойные диалоги и философские подтексты...</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row my-4">
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <div class="container d-grid">
+                    <h5 class="text-end">Паразиты (2019)</h5>
+                    <p class="text-start">Фильм Пон Джун-хо, получивший «Оскар» за лучший фильм.</p>
+                    <a href="#" class="btn btn-primary ms-auto">Подробнее</a>
+                </div>
+                <img src="https://static.kinoafisha.info/k/movie_posters/1920x1080/upload/movie_posters/9/1/5/8355519/979732191653467608.jpg" class="h-auto w-25" alt="">
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <img src="https://i.pinimg.com/736x/6f/c5/a3/6fc5a3240f09d882606e55da4a58b2dd.jpg" class="h-auto w-25" alt="">
+                <div class="container d-grid">
+                    <h5 class="text-start">Начало (2010)</h5>
+                    <p class="text-start">Сложный, но захватывающий триллер о грабеже в мире снов.</p>
+                    <a href="#" class="btn btn-primary me-auto">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <div class="container d-grid">
+                    <h5 class="text-center">Одержимость (2014)</h5>
+                    <p class="text-start">Драма о молодом барабанщике, который готов на всё ради признания.
+                        Феноменальная игра Дж. К. Симмонса делают этот фильм незабываемым.</p>
+                    <a href="#" class="btn btn-primary ms-auto">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <img src="https://i.pinimg.com/736x/c4/d1/bd/c4d1bdb6e46b23c4677618135d2cc368.jpg" class="h-auto w-25" alt="">
+                <div class="container d-grid">
+                    <h5 class="text-start">Дюна (2021)</h5>
+                    <p class="text-start">Масштабная экранизация романа Фрэнка Герберта сочетает философскую глубину и зрелищность.</p>
+                    <a href="#" class="btn btn-primary me-auto">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <div class="container d-grid">
+                    <h5 class="text-center">Безумный Макс: Дорога ярости (2015)</h5>
+                    <p class="text-start">Этот фильм — непрерывный поток адреналина. 
+                        Джордж Миллер создал постапокалиптический шедевр с потрясающими трюками и минималистичным, но мощным сюжетом.</p>
+                    <a href="#" class="btn btn-primary ms-auto">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <img src="https://avatars.mds.yandex.net/get-mpic/11763878/2a0000018b4350ed816ef542700f80914efa/orig" class="h-auto w-25" alt="">
+                <div class="container d-grid">
+                    <h5 class="text-start">Интерстеллар (2014)</h5>
+                    <p class="text-start">Нолан исследует темы любви, жертвенности и науки в этом амбициозном проекте. Фильм-открытие, заработавший оскар.</p>
+                    <a href="#" class="btn btn-primary me-auto">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <div class="container d-grid">
+                    <h5 class="text-center">Ла-Ла Ленд (2016)</h5>
+                    <p class="text-start">Романтическая драма о двух артистах в Лос-Анджелесе. 
+                        Яркие музыкальные номера и меланхоличная история о выборе между любовью и карьерой.</p>
+                    <a href="#" class="btn btn-primary ms-auto">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="container d-grid">
+                <h5 class="text-center">Однажды в Голливуде (2019)</h5>
+                <p class="text-start">Квентин Тарантино создаёт тёплый, ироничный портрет Голливуда 1960-х. 
+                    Фильм полон отсылок и неожиданных поворотов, заставляющих с интересом наблюдать за происходящим.</p>
+                <a href="#" class="btn btn-primary ms-auto">Подробнее</a>
+            </div>
+        </div>
+        <div class="col-md-4 my-2">
+            <div class="container d-flex">
+                <div class="container d-grid">
+                    <h5 class="text-end">Оппенгеймер (2023)</h5>
+                    <p class="text-start">Историческая драма, раскрывающая создание атомной бомбы и внутренний конфликт учёного.</p>
+                    <a href="#" class="btn btn-primary ms-auto">Подробнее</a>
+                </div>
+                <img src="http://images-s.kinorium.com/movie/poster/2828885/w1500_51122842.jpg" class="h-auto w-25" alt="">
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="bg-black text-white text-center">
+    © 2025 • Мистреков Вячеслав • гр. Б9123-02.03.03тп
+  </footer>
+
+</body>
+
